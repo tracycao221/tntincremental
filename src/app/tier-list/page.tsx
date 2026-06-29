@@ -9,11 +9,11 @@ const checkedDate = "June 28, 2026";
 const buildFaqSchema = [
   {
     q: "Does TNT Incremental have a final tier list?",
-    a: "Not yet. Basic, Fire, Gem, and Mining runes are confirmed by the official page, but exact effects, odds, and best-use cases still need verification."
+    a: "This page is a ranking status page, not a fake final tier list. Basic, Fire, Gem, and Mining runes are confirmed, while exact effects and odds are held until tested."
   },
   {
     q: "Why are hard S/A/B tiers held?",
-    a: "The project does not yet have source-backed rune effects, upgrade values, Rebirth formulas, or Ascend boost values."
+    a: "The public sources reviewed here do not provide enough rune effects, upgrade values, Rebirth formulas, or Ascend boost values for fair S/A/B ranking."
   },
   {
     q: "What can be ranked safely now?",
@@ -26,33 +26,33 @@ const trackedItems = [
     name: "Basic Rune",
     type: "Rune",
     confidence: "Source-backed existence",
-    status: "Needs effect data",
+    status: "Held for effect data",
     source: "Official source names Basic runes.",
-    nextCheck: "Verify effect, odds, rarity and best use."
+    nextCheck: "Rank after effect, odds, rarity and best-use data is tested."
   },
   {
     name: "Fire Rune",
     type: "Rune",
     confidence: "Source-backed existence",
-    status: "Needs effect data",
+    status: "Held for effect data",
     source: "Official source names Fire runes.",
-    nextCheck: "Verify effect, odds, rarity and best use."
+    nextCheck: "Rank after effect, odds, rarity and best-use data is tested."
   },
   {
     name: "Gem Rune",
     type: "Rune",
     confidence: "Source-backed existence",
-    status: "Needs effect data",
+    status: "Held for effect data",
     source: "Official source names Gem runes.",
-    nextCheck: "Verify effect, odds, rarity and best use."
+    nextCheck: "Rank after effect, odds, rarity and best-use data is tested."
   },
   {
     name: "Mining Rune",
     type: "Rune",
     confidence: "Source-backed existence",
-    status: "Needs effect data",
+    status: "Held for effect data",
     source: "Official source names Mining runes.",
-    nextCheck: "Verify effect, odds, rarity and best use."
+    nextCheck: "Rank after effect, odds, rarity and best-use data is tested."
   },
   {
     name: "Upgrade Tree priorities",
@@ -60,7 +60,7 @@ const trackedItems = [
     confidence: "Early signal",
     status: "Held from ranking",
     source: "Official source confirms Upgrade Tree and Tree Crystals.",
-    nextCheck: "Verify node list, unlock cost, and boost values."
+    nextCheck: "Rank after node list, unlock cost, and boost values are tested."
   }
 ];
 
@@ -105,7 +105,7 @@ export default function TierListPage() {
       <PageIntro
         eyebrow={`Checked date: ${checkedDate}`}
         title="TNT Incremental Tier List Status"
-        description="This is a confidence-labelled ranking status page. It tracks confirmed TNT Incremental mechanics, but hard S/A/B tiers are held until rune effects, upgrade values, and reset formulas are verified."
+        description="This is a confidence-labelled ranking status page. It tracks confirmed TNT Incremental mechanics and shows why hard S/A/B tiers are held until rune effects, upgrade values, and reset formulas are tested."
       />
 
       <section className="mt-8 grid gap-4 lg:grid-cols-3">
@@ -130,12 +130,12 @@ export default function TierListPage() {
         <SectionHeader
           eyebrow="Filter tabs"
           title="Confirmed mechanics and held rankings"
-          copy="Use these cards to see what exists, what is Source-backed, and what still needs checking before a final tier list."
+          copy="Use these cards to see what exists, what is source-backed, and which evidence is required before a final tier list."
         />
         <div className="mt-6 flex flex-wrap gap-2">
           <span className="status-pill">Runes</span>
           <span className="status-pill">Upgrades</span>
-          <span className="status-pill">Needs check</span>
+          <span className="status-pill">Data held</span>
           <span className="status-pill">Held from ranking</span>
         </div>
         <div className="mt-6 grid gap-4">
@@ -160,15 +160,15 @@ export default function TierListPage() {
       <section className="mt-10 grid gap-4 lg:grid-cols-3">
         <article className="content-card">
           <h3 className="text-lg font-bold text-white">Beginner ranking</h3>
-          <p className="mt-2 text-sm leading-6 text-white/66">Needs check. A beginner ranking needs safe early-game effects and unlock cost data.</p>
+          <p className="mt-2 text-sm leading-6 text-white/66">Held. A beginner ranking needs early-game effect and unlock-cost data before it can be fair.</p>
         </article>
         <article className="content-card">
           <h3 className="text-lg font-bold text-white">Farming ranking</h3>
-          <p className="mt-2 text-sm leading-6 text-white/66">Needs check. Farming ranking needs Cash impact, rune effects, and Upgrade Tree values.</p>
+          <p className="mt-2 text-sm leading-6 text-white/66">Held. Farming ranking needs Cash impact, rune effects, and Upgrade Tree values.</p>
         </article>
         <article className="content-card">
           <h3 className="text-lg font-bold text-white">Late-game ranking</h3>
-          <p className="mt-2 text-sm leading-6 text-white/66">Needs check. Late-game ranking needs Ascend and Big Rune evidence.</p>
+          <p className="mt-2 text-sm leading-6 text-white/66">Held. Late-game ranking needs Ascend and Big Rune evidence.</p>
         </article>
       </section>
 

@@ -15,13 +15,13 @@ export default function UpgradeTreeGuidePage() {
     <main className="mx-auto max-w-7xl px-4 py-10">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Guides", href: "/guides" }, { name: "Upgrade Tree", href: "/guides/upgrade-tree" }]} />
       <Breadcrumbs items={[{ label: "Guides", href: "/guides" }, { label: "Upgrade Tree", href: "/guides/upgrade-tree" }]} />
-      <PageIntro eyebrow="Tree Crystals" title="TNT Incremental Upgrade Tree Guide" description="The official page confirms an Upgrade Tree where Tree Crystals buy global boosts. Node list, cost and boost values still need verification." />
+      <PageIntro eyebrow="Tree Crystals" title="TNT Incremental Upgrade Tree Guide" description="The official page confirms an Upgrade Tree where Tree Crystals buy global boosts. This guide explains the system while holding exact node costs and boost values for testing." />
       <section className="mt-10 grid gap-4 md:grid-cols-2">
         <article className="content-card">
           <SectionHeader eyebrow="Confirmed" title="Upgrade Tree exists" copy="Tree Crystals and global boosts are official-page mechanics." />
         </article>
         <article className="content-card">
-          <SectionHeader eyebrow="Needs verification" title="Exact priorities are held" copy="No hard best-upgrade claims until node costs and boost values are verified." />
+          <SectionHeader eyebrow="Held ranking" title="Exact priorities are held" copy="No hard best-upgrade claims are published until node costs and boost values are tested." />
         </article>
       </section>
       <div className="mt-8 flex flex-wrap gap-3">

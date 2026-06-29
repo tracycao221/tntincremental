@@ -6,7 +6,7 @@ import { Breadcrumbs, PageIntro, SectionHeader } from "@/components/ui/content";
 
 export const metadata: Metadata = {
   title: "TNT Incremental Ascend Guide (June 2026)",
-  description: "Plan around TNT Incremental Ascend with source-safe notes. Requirements and boost values still need verification.",
+  description: "Plan around TNT Incremental Ascend with source-safe notes and no invented requirement or boost values.",
   alternates: { canonical: `${siteConfig.domain}/guides/ascend` }
 };
 
@@ -15,13 +15,13 @@ export default function AscendGuidePage() {
     <main className="mx-auto max-w-7xl px-4 py-10">
       <BreadcrumbJsonLd items={[{ name: "Home", href: "/" }, { name: "Guides", href: "/guides" }, { name: "Ascend", href: "/guides/ascend" }]} />
       <Breadcrumbs items={[{ label: "Guides", href: "/guides" }, { label: "Ascend", href: "/guides/ascend" }]} />
-      <PageIntro eyebrow="Advanced reset" title="TNT Incremental Ascend Guide" description="The official page confirms Ascend resets progress for Big Rune and Cash boosts. Requirements, boost amounts and best timing need verification." />
+      <PageIntro eyebrow="Advanced reset" title="TNT Incremental Ascend Guide" description="The official page confirms Ascend resets progress for Big Rune and Cash boosts. Requirements, boost amounts, and best timing stay held until source-backed testing is available." />
       <section className="mt-10 grid gap-4 md:grid-cols-2">
         <article className="content-card">
           <SectionHeader eyebrow="Confirmed" title="Ascend exists" copy="Ascend is an advanced reset connected to Big Rune and Cash boosts." />
         </article>
         <article className="content-card">
-          <SectionHeader eyebrow="Needs verification" title="Exact values are held" copy="Do not claim requirements, boost values or timing thresholds until source-backed data exists." />
+          <SectionHeader eyebrow="Held values" title="Exact values are held" copy="Requirements, boost values, and timing thresholds stay out of the guide until source-backed data exists." />
         </article>
       </section>
       <div className="mt-8 flex flex-wrap gap-3">

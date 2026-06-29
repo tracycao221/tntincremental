@@ -86,8 +86,8 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeader
             eyebrow="Tier preview"
-            title={`${siteConfig.gameName} tier list preview`}
-            copy="Start with the strongest current picks, then use the full tier list when you need ranking notes, substitutes, and update dates."
+            title={`${siteConfig.gameName} ranking status`}
+            copy="The page tracks confirmed systems first. Exact best-rune and best-upgrade rankings stay held until effects, odds, costs, and reset values are tested."
           />
           <div className="grid gap-4 md:grid-cols-3">
             {tierPreview.map((item) => (
@@ -142,10 +142,10 @@ export default function HomePage() {
             </div>
           </div>
           <div>
-            <SectionHeader
-              eyebrow="Wiki coverage"
-              title="Entity pages for Roblox search demand"
-              copy="Characters, items, maps, clans, units, codes, and puzzle pages should be split into wiki entities when research confirms them."
+          <SectionHeader
+            eyebrow="Wiki coverage"
+            title="Rune, potion, and leaderboard notes"
+            copy="The wiki covers TNT Incremental systems confirmed by the official Roblox page, while exact values stay clearly separated from confirmed facts."
             />
             <div className="mt-6 grid gap-3">
               {wikiCards.map((item) => (

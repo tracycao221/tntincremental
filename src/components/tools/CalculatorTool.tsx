@@ -24,7 +24,7 @@ export function CalculatorTool() {
 
     return {
       headline: `${roundedMinutes} min to your ${label}`,
-      detail: "This estimate uses your manual Cash/min value. Exact TNT Incremental formulas, boosts, rune effects, and potion effects are still marked as needs verification."
+      detail: "This estimate uses your manual Cash/min value. Exact TNT Incremental formulas, boosts, rune effects, and potion effects are treated as player-entered assumptions."
     };
   }, [cash, cashPerMinute, targetCost, mode]);
 

@@ -18,7 +18,7 @@ export default function SourcesPage() {
       <PageIntro
         eyebrow="Verification"
         title={`${siteConfig.gameName} Sources`}
-        description="Use this page to see where code, tier-list, update, Trello, Discord, wiki, and guide claims are checked. Official Roblox pages should win when sources disagree."
+        description="Use this page to see where code, tier-list, update, Trello, Discord, wiki, and guide claims are checked. The official Roblox page wins when sources disagree."
       />
 
       <section className="mt-10">
@@ -48,6 +48,24 @@ export default function SourcesPage() {
             );
           })}
         </div>
+      </section>
+
+      <section className="mt-10 grid gap-4 lg:grid-cols-3">
+        <article className="content-card">
+          <span className="mini-label">Official facts</span>
+          <h2 className="mt-3 text-xl font-bold text-white">What Roblox confirms</h2>
+          <p className="mt-2 text-sm leading-6 text-white/65">OG Incrementals, place 79903287408965, Drop TNT, Cash, Upgrades, Rebirth, Upgrade Tree, Basic/Fire/Gem/Mining Runes, Ascend, Leaderboards, and Release for free Potions.</p>
+        </article>
+        <article className="content-card">
+          <span className="mini-label">Community reports</span>
+          <h2 className="mt-3 text-xl font-bold text-white">Useful but secondary</h2>
+          <p className="mt-2 text-sm leading-6 text-white/65">Discord, video, Reddit, and code-tracker claims can guide what to test, but they stay separate from official-page facts until verified.</p>
+        </article>
+        <article className="content-card">
+          <span className="mini-label">Rejected intent</span>
+          <h2 className="mt-3 text-xl font-bold text-white">Scripts and cheat pages</h2>
+          <p className="mt-2 text-sm leading-6 text-white/65">Script, exploit, and cheat-adjacent keywords are not part of this site. The project focuses on legitimate play, guides, and source-backed progression help.</p>
+        </article>
       </section>
     </main>
   );

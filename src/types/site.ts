@@ -26,7 +26,7 @@ export type LinkCard = {
 
 export type TierPreviewItem = {
   name: string;
-  tier: "S" | "A" | "B" | "C";
+  tier: "S" | "A" | "B" | "C" | "Hold";
   role: string;
   reason: string;
   confidence?: "Source-backed" | "Early signal" | "Needs check";

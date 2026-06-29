@@ -5,11 +5,11 @@ export const siteConfig: SiteConfig = {
   name: `${gameConfig.name} Wiki`,
   domain: gameConfig.domain,
   gameName: gameConfig.name,
-  description: `${gameConfig.name} wiki with active codes, tier list rankings, Trello and Discord status, calculators, guides, and source-backed Roblox progression help.`,
-  valueProposition: `Track active ${gameConfig.name} codes, compare the best picks, and use practical tools before you spend time grinding in Roblox.`,
+  description: `${gameConfig.name} wiki with Roblox codes, source-checked update notes, ranking status, Discord and Trello checks, calculators, guides, and progression help.`,
+  valueProposition: `Track the official ${gameConfig.name} Release code, review community-reported code watchlists, and plan Roblox progression without relying on fake stats.`,
   shortDisclosure: `${gameConfig.name} Wiki is an unofficial fan-made resource. Roblox and the game creators remain the source of record for official support and updates.`,
-  lastUpdated: "2026-06-10",
-  freshnessLabel: "codes, tier list, and guides ready for verification",
+  lastUpdated: "2026-06-29",
+  freshnessLabel: "official page, codes, sources, and guides checked",
   keywords: [
     `${gameConfig.name}`,
     `${gameConfig.name} codes`,
@@ -33,7 +33,7 @@ export const siteConfig: SiteConfig = {
       label: "Codes",
       href: "/codes",
       items: [
-        { label: "Active Codes", href: "/codes", description: "Latest known rewards and redemption steps." },
+        { label: "Active Codes", href: "/codes", description: "Official and community-reported reward status." },
         { label: "Updates", href: "/updates", description: "Verified update signals without unconfirmed changelog claims." },
         { label: "Sources", href: "/sources", description: "Where code and update claims should be checked." }
       ]
@@ -42,16 +42,16 @@ export const siteConfig: SiteConfig = {
       label: "Tier List",
       href: "/tier-list",
       items: [
-        { label: "Rankings", href: "/tier-list", description: "Best current picks and why they matter." },
-        { label: "Calculator", href: "/calculator", description: "Decision helper for builds or progression." }
+        { label: "Rankings", href: "/tier-list", description: "Confirmed mechanics and held ranking criteria." },
+        { label: "Calculator", href: "/calculator", description: "Manual planner for Cash, Rebirth, Upgrade Tree, and Ascend goals." }
       ]
     },
     {
       label: "Wiki",
       href: "/wiki",
       items: [
-        { label: "Wiki Hub", href: "/wiki", description: "Entity pages for items, units, maps, clans, or systems." },
-        { label: "Guides", href: "/guides", description: "Beginner, farming, boss, and progression paths." },
+        { label: "Wiki Hub", href: "/wiki", description: "Runes, Potions, Leaderboards, and progression systems." },
+        { label: "Guides", href: "/guides", description: "Beginner, Rebirth, Upgrade Tree, and Ascend paths." },
         { label: "Updates", href: "/updates", description: "Source-backed update and event status." },
         { label: "Trello/Discord", href: "/trello", description: "Official board, Discord, and wiki status." }
       ]
@@ -76,49 +76,49 @@ export const heroActions = [
 ] as const;
 
 export const heroMetrics: HeroMetric[] = [
-  { label: "Code status", value: "Live", note: "Designed for frequent checks" },
-  { label: "Core pages", value: "10", note: "Codes, tier list, Trello, tools, guides, wiki" },
-  { label: "Source notes", value: "Clear", note: "Official, community, and needs-check labels" },
-  { label: "Source model", value: "Clear", note: "Official and community links split" }
+  { label: "Official code", value: "Release", note: "Listed on the Roblox page for free Potions" },
+  { label: "Core loop", value: "7 steps", note: "TNT, Cash, Upgrades, Rebirth, Tree, Runes, Ascend" },
+  { label: "Source model", value: "Split", note: "Official facts and community reports stay separate" },
+  { label: "Domain", value: ".org", note: "Built for tntincremental.org" }
 ];
 
 export const activeCodes: GameCode[] = [
-  { code: "UPDATE", reward: `Starter ${gameConfig.currency.name} or boost reward`, status: "Needs check", addedDate: "Verify before launch" },
-  { code: "RELEASE", reward: "Launch reward placeholder", status: "Needs check", addedDate: "Verify before launch" },
-  { code: "WELCOME", reward: "New player reward placeholder", status: "Needs check", addedDate: "Verify before launch" },
-  { code: "THANKS", reward: "Community reward placeholder", status: "Needs check", addedDate: "Verify before launch" }
+  { code: "Release", reward: "Free Potions", status: "Verified", addedDate: "Official Roblox page" },
+  { code: "UPDATE", reward: "Community-reported reward", status: "Unverified", addedDate: "Test in-game before relying on it" },
+  { code: "WELCOME", reward: "Community-reported reward", status: "Unverified", addedDate: "Community watchlist" },
+  { code: "THANKS", reward: "Community-reported reward", status: "Unverified", addedDate: "Community watchlist" }
 ];
 
 export const tierPreview: TierPreviewItem[] = [
   {
-    name: "Best early-game pick",
-    tier: "S",
-    role: "Starter path",
-    reason: "Use this slot for the safest beginner recommendation once research confirms the game systems.",
-    confidence: "Needs check",
-    bestFor: ["beginner", "low investment"],
-    sourceNote: "Replace with checked Roblox, creator, wiki, video, or community evidence.",
-    teamNote: "Good starter picks should work without rare team pieces."
+    name: "Upgrade Tree",
+    tier: "Hold",
+    role: "Global boosts",
+    reason: "The official page confirms Tree Crystals and global boosts, but node costs and boost values are not public enough for hard ranking.",
+    confidence: "Source-backed",
+    bestFor: ["planning", "long-term progression"],
+    sourceNote: "Confirmed as a system on the official Roblox page.",
+    teamNote: "Rank exact nodes only after cost and effect data is tested."
   },
   {
-    name: "Best farming pick",
-    tier: "A",
-    role: "Progression",
-    reason: "Use this slot for the most repeatable grind, income, or mission option.",
-    confidence: "Needs check",
-    bestFor: ["farming", "repeat runs"],
-    sourceNote: "Replace with current creator videos, wiki notes, or verified community testing.",
-    teamNote: "Pair farming picks with support or speed options when the game has team slots."
+    name: "Runes",
+    tier: "Hold",
+    role: "Boost system",
+    reason: "Basic, Fire, Gem, and Mining runes are confirmed; effects and odds are held from ranking until tested.",
+    confidence: "Source-backed",
+    bestFor: ["boosts", "Ascend planning"],
+    sourceNote: "Rune names are listed in the official Roblox page description.",
+    teamNote: "Avoid best-rune claims until effect data is available."
   },
   {
-    name: "Best endgame pick",
-    tier: "A",
-    role: "Late game",
-    reason: "Use this slot for high-skill or high-investment choices after more data is available.",
-    confidence: "Needs check",
-    bestFor: ["late game", "bossing"],
-    sourceNote: "Replace with cross-checked late-game, update, or boss-clear evidence.",
-    teamNote: "Endgame picks need synergy notes before being ranked as final."
+    name: "Ascend",
+    tier: "Hold",
+    role: "Advanced reset",
+    reason: "Ascend is confirmed for Big Rune and Cash boosts, but requirements and boost numbers are not published here as facts.",
+    confidence: "Source-backed",
+    bestFor: ["late game", "reset planning"],
+    sourceNote: "Confirmed by the official Roblox page.",
+    teamNote: "Use the calculator in manual mode for personal timing estimates."
   }
 ];
 
@@ -127,25 +127,25 @@ export const toolCards: LinkCard[] = [
     title: `${gameConfig.name} Calculator`,
     href: "/calculator",
     eyebrow: "Primary tool",
-    description: "A practical decision helper that can later become a full formula-based calculator."
+    description: "Manual planner for Cash goals, Upgrade targets, Rebirth timing, and Ascend preparation."
   },
   {
     title: `${gameConfig.name} Tier List`,
     href: "/tier-list",
     eyebrow: "Rankings",
-    description: "Ranks the current best picks with notes for beginners, farming, and late-game use."
+    description: "Shows confirmed mechanics and the exact evidence needed before publishing best-rune or best-upgrade rankings."
   },
   {
     title: `${gameConfig.name} Codes`,
     href: "/codes",
     eyebrow: "Codes",
-    description: "Tracks active codes, expired-code conflicts, and redemption instructions."
+    description: "Tracks the official Release code and separates community-reported codes from verified rewards."
   },
   {
     title: `${gameConfig.name} Trello & Discord`,
     href: "/trello",
     eyebrow: "Community status",
-    description: "Clarifies official Trello, Discord, wiki, and Roblox source status for update-sensitive claims."
+    description: "Clarifies the official Roblox source, Discord invite status, Trello search intent, and wiki boundaries."
   },
   {
     title: `${gameConfig.name} Updates`,
@@ -160,40 +160,40 @@ export const guideClusters: LinkCard[] = [
     title: "Beginner guide",
     href: "/guides",
     eyebrow: "Guide",
-    description: "First-session path, mistakes to avoid, and what to unlock first."
+    description: "Start with Drop TNT, Cash, upgrades, Rebirth, Upgrade Tree, Runes, Ascend, and Leaderboards."
   },
   {
     title: "Progression guide",
-    href: "/guides",
+    href: "/guides/upgrade-tree",
     eyebrow: "Guide",
-    description: "Mid-game priorities, resource planning, and farming routes."
+    description: "Understand Tree Crystals and global boosts without fake node values."
   },
   {
     title: "Advanced strategy",
-    href: "/guides",
+    href: "/guides/ascend",
     eyebrow: "Guide",
-    description: "Late-game builds, boss prep, meta choices, or trading decisions."
+    description: "Plan Ascend around Big Rune and Cash boosts with conservative timing notes."
   }
 ];
 
 export const wikiCards: LinkCard[] = [
   {
-    title: "Items and rewards",
-    href: "/wiki",
+    title: "Runes",
+    href: "/wiki/runes",
     eyebrow: "Wiki",
-    description: "Use for weapons, pets, units, items, drops, or reward tables."
+    description: "Basic, Fire, Gem, and Mining rune names from the official Roblox page."
   },
   {
-    title: "Maps and systems",
-    href: "/wiki",
+    title: "Potions",
+    href: "/wiki/potions",
     eyebrow: "Wiki",
-    description: "Use for locations, bosses, quests, puzzles, events, or mechanics."
+    description: "Potion reward notes tied to the official Release code mention."
   },
   {
-    title: "Builds and entities",
-    href: "/wiki",
+    title: "Leaderboards",
+    href: "/wiki/leaderboards",
     eyebrow: "Wiki",
-    description: "Use for clans, classes, characters, abilities, factories, or brainrots."
+    description: "Leaderboard status without invented categories, ranks, or rewards."
   }
 ];
 
@@ -202,55 +202,55 @@ export const officialLinks: LinkCard[] = [
     title: "Official Roblox game page",
     href: gameConfig.dataSources.officialGameUrl,
     eyebrow: "Official",
-    description: "Use this page as the source of record for game title, creator, and live Roblox availability."
+    description: "Source of record for title, creator, core mechanics, Release code, and the community-server mention."
   },
   {
     title: "Trello, Discord, and board status",
     href: gameConfig.dataSources.trello && gameConfig.dataSources.trello !== "#" ? gameConfig.dataSources.trello : (gameConfig.dataSources.discord && gameConfig.dataSources.discord !== "#" ? gameConfig.dataSources.discord : "/trello"),
     eyebrow: "Community",
-    description: "Use this status route or verified creator links to separate official boards from community references."
+    description: "Check the Discord invite and the current no-official-Trello status before trusting update claims."
   },
   {
     title: "Source checklist",
     href: "/sources",
     eyebrow: "Editorial",
-    description: "Document which claims are official, community confirmed, or still uncertain."
+    description: "Documents official facts, community reports, held topics, and rejected script/cheat intent."
   }
 ];
 
 export const editorialSignals: EditorialSignal[] = [
   {
     title: "Freshness first",
-    body: "Codes, updates, and tier lists should show a visible checked date and avoid pretending unverified claims are final."
+    body: "Official facts, community-reported codes, and held rankings are labeled separately so players can act with context."
   },
   {
     title: "Entity coverage",
-    body: "Split major game entities into wiki pages when search demand exists instead of burying everything on the homepage."
+    body: "Rune, Potion, Leaderboard, Rebirth, Upgrade Tree, and Ascend pages cover the confirmed loop without inventing values."
   },
   {
     title: "Fan-site clarity",
-    body: "This fan site clearly points players back to official Roblox and creator-owned support paths."
+    body: "This fan site points back to Roblox and clearly separates Discord/community signals from official game facts."
   }
 ];
 
 export const videoGuides: LinkCard[] = [
   {
-    title: "Gameplay overview",
-    href: "#",
-    eyebrow: "Video",
-    description: "Use a current YouTube creator guide that explains the game loop and shows real gameplay."
+    title: "Community videos",
+    href: "/sources",
+    eyebrow: "Source note",
+    description: "Use videos as player experience signals only; do not treat them as official patch notes."
   },
   {
-    title: "Beginner route",
-    href: "#",
-    eyebrow: "Video",
-    description: "Use a recent YouTube walkthrough for the first session or first major unlock."
+    title: "Discord checks",
+    href: "/trello",
+    eyebrow: "Community",
+    description: "The official Roblox page mentions a community server; verify Discord announcements before copying update claims."
   },
   {
-    title: "Meta showcase",
-    href: "#",
-    eyebrow: "Video",
-    description: "Use a YouTube video that supports rankings, builds, update context, or advanced strategy."
+    title: "Code trackers",
+    href: "/codes",
+    eyebrow: "Codes",
+    description: "Community code reports can be useful, but the page keeps the official Release code separate."
   }
 ];
 
@@ -266,33 +266,33 @@ export const faqs: Record<"home" | "codes" | "tierList" | "calculator", FaqItem[
     },
     {
       q: `How often should ${gameConfig.name} codes be checked?`,
-      a: "Codes should be checked whenever the game updates, reaches milestones, or community sources report new rewards. Keep the checked date visible."
+      a: "The official Roblox page currently mentions Release for free Potions. Community-reported codes should be tested in game before being treated as active."
     },
     {
       q: `What pages should be expanded first?`,
-      a: "Start with codes, tier list, Trello/Discord status, calculator, beginner guide, wiki hub, and sources. Add entity pages after research confirms the game's real systems."
+      a: "Start with codes, updates, source status, calculator, Rebirth, Upgrade Tree, Ascend, Runes, Potions, and Leaderboards."
     }
   ],
   codes: [
     {
       q: `Where do ${gameConfig.name} codes come from?`,
-      a: "Use official Roblox descriptions, creator groups, Discord announcements, Trello boards, and trusted community trackers when available."
+      a: "Use the official Roblox page first, then creator-owned Discord announcements and dated community trackers as secondary signals."
     },
     {
-      q: "Why are some codes marked Needs check?",
-      a: "Uncertain rewards stay clearly labeled so the page does not overstate verification."
+      q: "Why are some codes marked community reported?",
+      a: "Community-reported codes may be useful, but they are not listed as official unless they appear on the Roblox page or are confirmed in game."
     }
   ],
   tierList: [
     {
       q: "How should the tier list be updated?",
-      a: "Replace placeholder tiers with research-backed rankings, explain use cases, and split beginner, farming, and endgame recommendations when needed."
+      a: "Keep confirmed mechanics visible, hold exact rune and upgrade rankings until effect data is available, and record source notes on every ranking change."
     }
   ],
   calculator: [
     {
       q: "Is the calculator exact?",
-      a: "The bootstrap calculator is a starter decision helper. Replace it with verified formulas, tables, and game-specific inputs as research improves."
+      a: "No. It is a manual planner that uses your own Cash and rate inputs because exact TNT Incremental formulas are not published here as official facts."
     }
   ]
 };

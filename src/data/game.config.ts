@@ -3,7 +3,7 @@ import type { GameConfig } from "@/types/site";
 export const gameConfig: GameConfig = {
   name: "TNT Incremental",
   slug: "tnt-incremental",
-  domain: "https://tnt-incremental.com",
+  domain: "https://tntincremental.org",
   theme: {
     primaryColor: "#FACC15",
     accentColor: "#38BDF8",
@@ -11,8 +11,8 @@ export const gameConfig: GameConfig = {
     style: "roblox-seo-hub"
   },
   currency: {
-    name: "Coins",
-    abbr: "COINS"
+    name: "Cash",
+    abbr: "CASH"
   },
   features: {
     hasCalculator: true,
@@ -23,8 +23,8 @@ export const gameConfig: GameConfig = {
   },
   updateCadence: "Weekly checks",
   dataSources: {
-    officialGameUrl: "https://www.roblox.com/discover",
-    discord: "#",
+    officialGameUrl: "https://www.roblox.com/games/79903287408965/TNT-Incremental",
+    discord: "https://discord.com/invite/cVFtzcFS6r",
     trello: "#"
   },
   ads: {

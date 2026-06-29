@@ -12,9 +12,24 @@ const codes = [
   {
     code: "Release",
     reward: "Free Potions",
-    status: "Official page mention",
-    addedDate: "Last verified: June 28, 2026",
+    status: "Official Roblox page",
+    addedDate: "Checked: June 29, 2026",
     source: "Official Roblox page description"
+  }
+];
+
+const communityReportedCodes = [
+  {
+    code: "UPDATE",
+    note: "Reported by community code trackers. Test in game before relying on the reward."
+  },
+  {
+    code: "WELCOME",
+    note: "Reported by community code trackers. Not listed on the official Roblox page."
+  },
+  {
+    code: "THANKS",
+    note: "Reported by community code trackers. Keep separate from official-page codes."
   }
 ];
 
@@ -23,15 +38,15 @@ const expiredCodes: { code: string; note: string }[] = [];
 const faqItems = [
   {
     q: "What TNT Incremental code is confirmed?",
-    a: "Release is the only code currently recorded from the official OG Incrementals Roblox page evidence for this project."
+    a: "Release is the code currently confirmed from the official OG Incrementals Roblox page and is described as giving free Potions."
   },
   {
-    q: "Why are there not more TNT Incremental codes here?",
-    a: "Extra codes are not listed until they are verified from the official Roblox page, an in-game check, or another reliable source."
+    q: "Why are community-reported codes separated?",
+    a: "Community trackers can surface useful leads, but this page keeps them separate from official Roblox page codes until they are tested in game or confirmed by a creator-owned channel."
   },
   {
     q: "What if the Release code does not work?",
-    a: "Check spelling, server freshness, and whether the code expired. The exact in-game redemption path still needs verification before final launch copy."
+    a: "Check spelling, capitalization, and server freshness. If a code panel rejects it, treat it as expired or temporarily unavailable and check the official Roblox page or Discord for changes."
   },
   {
     q: "Is this the official TNT Incremental codes page?",
@@ -43,7 +58,7 @@ const buildFaqSchema = faqItems;
 
 export const metadata: Metadata = {
   title: `TNT Incremental Codes (${monthYear}) - Release Code`,
-  description: "Track TNT Incremental codes with source notes. Release is the confirmed official-page code mention for free Potions; other codes need verification.",
+  description: "Track TNT Incremental codes with source notes. Release is the confirmed official-page code for free Potions, with community-reported codes kept separate.",
   alternates: { canonical: `${siteConfig.domain}/codes` },
   openGraph: {
     title: `TNT Incremental Codes (${monthYear})`,
@@ -67,16 +82,16 @@ export default function CodesPage() {
       <Breadcrumbs items={[{ label: "Codes", href: "/codes" }]} />
 
       <PageIntro
-        eyebrow="Last verified: June 28, 2026"
+        eyebrow="Checked: June 29, 2026"
         title={`TNT Incremental Codes (${monthYear})`}
-        description="Use this page for source-checked TNT Incremental codes. Release is the only confirmed code in the current official-page evidence; everything else stays off the active list until verified."
+        description="Use this page for source-checked TNT Incremental codes. Release is the official-page code for free Potions; community-reported codes are listed separately so they do not look official."
       />
 
       <section className="mt-10">
         <SectionHeader
           eyebrow="Active codes"
-          title="Current best-known codes"
-          copy="Codes are freshness-sensitive. This page starts with official-page evidence and avoids unverified extras."
+          title="Official-page code"
+          copy="The official Roblox page is the source of record. Codes from community trackers stay in their own watchlist until they are tested or creator-confirmed."
         />
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {codes.map((code) => (
@@ -101,12 +116,12 @@ export default function CodesPage() {
           <SectionHeader
             eyebrow="Redeem steps"
             title="How to redeem codes"
-            copy="The exact in-game redemption location still needs verification. Use these safe checks before launch copy is finalized."
+            copy="Roblox code panels often move between reward, settings, shop, or community buttons. These steps avoid claiming a specific menu path when the official page does not name one."
           />
           <ol className="mt-5 grid gap-3 text-white/70">
             <li>1. Open TNT Incremental from the official OG Incrementals Roblox page.</li>
             <li>2. Join a fresh server if a code was just released.</li>
-            <li>3. Look for a Codes, Rewards, Shop, Settings, or community-server code panel.</li>
+            <li>3. Look for a Codes, Rewards, Shop, Settings, or community-server button.</li>
             <li>4. Paste the code exactly and check whether Potions are granted.</li>
           </ol>
         </article>
@@ -114,7 +129,7 @@ export default function CodesPage() {
           <SectionHeader
             eyebrow="Use your rewards well"
             title="Why these codes matter"
-            copy="Potions can affect early progression, but potion types and effects are not verified yet. Spend rewards carefully and check the source notes before relying on exact values."
+            copy="The official page says Release gives free Potions. Potion effects can affect planning, so the calculator stays manual instead of inventing boost values."
           />
           <div className="mt-5 flex flex-wrap gap-3">
             <Link className="button-secondary" href="/calculator">Open calculator</Link>
@@ -127,9 +142,28 @@ export default function CodesPage() {
 
       <section className="mt-10">
         <SectionHeader
+          eyebrow="Community reports"
+          title="Codes to test in game"
+          copy="These are not official-page codes. Keep them as a testing watchlist, especially after updates or server refreshes."
+        />
+        <div className="mt-6 grid gap-3">
+          {communityReportedCodes.map((code) => (
+            <article key={code.code} className="content-card">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <h2 className="font-mono text-xl font-bold text-white">{code.code}</h2>
+                <span className="status-pill">Community report</span>
+              </div>
+              <p className="mt-2 text-white/60">{code.note}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <SectionHeader
           eyebrow="Expired codes"
-          title="Expired and unverified codes"
-          copy="No expired TNT Incremental codes are confirmed in the current project evidence."
+          title="Expired code log"
+          copy="No expired TNT Incremental codes are source-backed enough to publish as a final expired table yet."
         />
         <div className="mt-6 grid gap-3">
           {expiredCodes.map((code) => (
@@ -139,7 +173,7 @@ export default function CodesPage() {
             </article>
           ))}
           {expiredCodes.length === 0 ? (
-            <p className="content-card text-white/70">No expired codes are source-backed yet. Unverified community claims stay out of the table.</p>
+            <p className="content-card text-white/70">The expired-code table is empty until a code is observed as rejected or a creator-owned source retires it.</p>
           ) : null}
         </div>
       </section>

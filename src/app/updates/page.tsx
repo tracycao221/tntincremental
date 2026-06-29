@@ -10,11 +10,11 @@ const monthYear = getCurrentMonthYear();
 const faqItems = [
   {
     q: "What is the latest verified TNT Incremental update?",
-    a: "This project has not captured a source-backed changelog entry beyond the official Roblox page evidence. New update claims stay pending until verified."
+    a: "The current source-backed update signal is the official Roblox page text, which highlights Open Runes and the confirmed progression systems. Patch-note style claims stay off this page unless they come from Roblox, Discord, or in-game checks."
   },
   {
     q: "Does this page use unofficial TNT Incremental update leaks?",
-    a: "No. Update notes should come from the official Roblox page, in-game verification, or clearly attributed creator-owned channels."
+    a: "No. Update notes should come from the official Roblox page, in-game checks, or clearly attributed creator-owned channels."
   },
   {
     q: "Is Choi Games used as an update source here?",
@@ -31,7 +31,7 @@ const verifiedSignals = [
   {
     label: "Core page description",
     status: "Confirmed mechanics",
-    detail: "The official page description confirms Drop TNT, Buy Upgrades, Rebirth, Upgrade Tree, Runes, Ascend, and Leaderboards."
+    detail: "The official page description confirms Drop TNT, Buy Upgrades, Rebirth, Upgrade Tree, Runes, Ascend, and Leaderboards. The current page art highlights Open Runes."
   },
   {
     label: "Code mention",
@@ -41,10 +41,10 @@ const verifiedSignals = [
 ];
 
 const heldSignals = [
-  "No verified patch-note timeline has been captured.",
-  "No verified event schedule has been captured.",
-  "No verified Trello, Discord, or official wiki URL has been captured.",
-  "No unofficial same-name page is treated as official evidence."
+  "No patch-note timeline is published here without a source date.",
+  "No event schedule is listed unless Roblox, Discord, or in-game checks support it.",
+  "No Trello board is treated as official unless creator-owned evidence appears.",
+  "No same-name third-party page is treated as the official game source."
 ];
 
 export const metadata: Metadata = {
@@ -75,7 +75,7 @@ export default function UpdatesPage() {
       <PageIntro
         eyebrow="Update status"
         title={`TNT Incremental Updates (${monthYear})`}
-        description="Use this page to separate verified TNT Incremental update signals from unconfirmed changelog claims. The official OG Incrementals Roblox page remains the source of record for this launch."
+        description="Use this page to separate official TNT Incremental update signals from community reports. The OG Incrementals Roblox page remains the source of record for core game facts."
       />
 
       <section className="mt-10">
@@ -98,9 +98,9 @@ export default function UpdatesPage() {
       <section className="mt-10 grid gap-4 lg:grid-cols-2">
         <article className="content-card">
           <SectionHeader
-            eyebrow="Held claims"
-            title="Not enough evidence yet"
-            copy="These topics can become update coverage later, but they should not be published as facts until verified."
+            eyebrow="Editorial rules"
+            title="What stays out of the changelog"
+            copy="This keeps the page useful without turning community chatter into fake patch notes."
           />
           <ul className="mt-5 grid gap-3 text-white/70">
             {heldSignals.map((item) => (

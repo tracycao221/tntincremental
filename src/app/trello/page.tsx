@@ -21,8 +21,8 @@ const statusRows = [
   {
     label: "Discord",
     href: gameConfig.dataSources.discord ?? "#",
-    status: gameConfig.dataSources.discord && gameConfig.dataSources.discord !== "#" ? "Candidate source" : "Needs verification",
-    note: "Use creator-owned Discord announcements when available. Avoid reposting unverified community rumors as facts."
+    status: gameConfig.dataSources.discord && gameConfig.dataSources.discord !== "#" ? "Community server" : "No invite captured",
+    note: "The official Roblox page mentions a community server; use Discord announcements as community signals and keep Roblox as the source of record for game facts."
   },
   {
     label: "Trello",
@@ -34,7 +34,7 @@ const statusRows = [
     label: "Wiki",
     href: "/wiki",
     status: "Site hub",
-    note: "Use the wiki hub for source-backed entities, mechanics, rewards, and guide links after research confirms them."
+    note: "Use the wiki hub for Runes, Potions, Leaderboards, Rebirth, Upgrade Tree, Ascend, and source-backed guide links."
   }
 ];
 
@@ -46,14 +46,14 @@ export default function TrelloStatusPage() {
       <PageIntro
         eyebrow="Community status"
         title={`${siteConfig.gameName} Trello, Discord & Wiki Status`}
-        description={`Use this page to check which ${siteConfig.gameName} community sources are official, which still need verification, and where to confirm codes, updates, and tier-list changes.`}
+        description={`Use this page to check the ${siteConfig.gameName} Roblox source, Discord/community status, Trello status, wiki hub, codes, updates, and tier-list evidence.`}
       />
 
       <section className="mt-10">
         <SectionHeader
           eyebrow="Official links"
           title="Source status"
-          copy="This page should be updated after research confirms the creator-owned links. Until then, uncertain links stay clearly labelled."
+          copy="Roblox stays the official source. Discord and community references are useful for update monitoring, while Trello remains unconfirmed unless a creator-owned board appears."
         />
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {statusRows.map((item) => {
