@@ -18,6 +18,10 @@ const buildFaqSchema = [
   {
     q: "What can be ranked safely now?",
     a: "The page can track confirmed mechanics and show what data is still missing, but it should not claim exact best runes or upgrades."
+  },
+  {
+    q: "What affects future TNT Incremental rankings?",
+    a: "Future rankings need tested Rune effects, Upgrade Tree values, Rebirth formulas, Ascend boost values, and how each choice affects Cash progression."
   }
 ];
 
@@ -77,19 +81,19 @@ const itemListSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "TNT Incremental Tier List Status (June 2026)",
-  description: "See which TNT Incremental rankings are safe to track and why exact rune or upgrade tiers are held until verified evidence exists.",
+  title: "TNT Incremental Tier List - Runes & Upgrade Ranking Status",
+  description: "See TNT Incremental Rune, Upgrade Tree, Rebirth, and Ascend ranking status with source-backed evidence and no fake best-rune claims.",
   alternates: { canonical: `${siteConfig.domain}/tier-list` },
   openGraph: {
-    title: "TNT Incremental Tier List Status",
-    description: "Confirmed mechanics, source notes, and held rankings for TNT Incremental.",
+    title: "TNT Incremental Tier List - Runes & Upgrades",
+    description: "Confirmed mechanics, source notes, and held rankings for TNT Incremental Runes, upgrades, Rebirth, and Ascend.",
     url: `${siteConfig.domain}/tier-list`,
     images: ["/opengraph-image"]
   },
   twitter: {
     card: "summary_large_image",
-    title: "TNT Incremental Tier List Status",
-    description: "Confidence-labelled TNT Incremental ranking evidence.",
+    title: "TNT Incremental Tier List - Runes & Upgrades",
+    description: "Confidence-labelled TNT Incremental ranking evidence for Runes, upgrades, Rebirth, and Ascend.",
     images: ["/opengraph-image"]
   }
 };
@@ -104,8 +108,8 @@ export default function TierListPage() {
 
       <PageIntro
         eyebrow={`Checked date: ${checkedDate}`}
-        title="TNT Incremental Tier List Status"
-        description="This is a confidence-labelled ranking status page. It tracks confirmed TNT Incremental mechanics and shows why hard S/A/B tiers are held until rune effects, upgrade values, and reset formulas are tested."
+        title="TNT Incremental Tier List and Ranking Status"
+        description="This is a confidence-labelled ranking status page for Runes, Upgrade Tree choices, Rebirth value, and Ascend planning. Hard S/A/B tiers stay held until rune effects, upgrade values, and reset formulas are tested."
       />
 
       <section className="mt-8 grid gap-4 lg:grid-cols-3">

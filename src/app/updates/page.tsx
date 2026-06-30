@@ -17,7 +17,7 @@ const faqItems = [
     a: "No. Update notes should come from the official Roblox page, in-game checks, or clearly attributed creator-owned channels."
   },
   {
-    q: "Is Choi Games used as an update source here?",
+    q: "Is a same-name third-party page used as an update source here?",
     a: "No. The confirmed official source for this TNT Incremental project is the OG Incrementals Roblox page only."
   }
 ];
@@ -48,19 +48,19 @@ const heldSignals = [
 ];
 
 export const metadata: Metadata = {
-  title: `TNT Incremental Updates (${monthYear}) - Verified Status`,
-  description: "Track source-backed TNT Incremental update signals without fake changelog entries. Official Roblox evidence stays the source of record.",
+  title: `TNT Incremental Updates (${monthYear}) - Codes, Runes & Guide Changes`,
+  description: "Track source-backed TNT Incremental update signals for codes, Runes, upgrades, Rebirth, Ascend, and guide changes without fake changelog entries.",
   alternates: { canonical: `${siteConfig.domain}/updates` },
   openGraph: {
-    title: `TNT Incremental Updates (${monthYear})`,
-    description: "Verified TNT Incremental update status and source boundaries.",
+    title: `TNT Incremental Updates (${monthYear}) - Codes & Runes`,
+    description: "Verified TNT Incremental update status, code notes, guide changes, and source boundaries.",
     url: `${siteConfig.domain}/updates`,
     images: ["/opengraph-image"]
   },
   twitter: {
     card: "summary_large_image",
-    title: `TNT Incremental Updates (${monthYear})`,
-    description: "Source-backed TNT Incremental update status.",
+    title: `TNT Incremental Updates (${monthYear}) - Codes & Runes`,
+    description: "Source-backed TNT Incremental update status for codes, Runes, Rebirth, upgrades, and Ascend.",
     images: ["/opengraph-image"]
   }
 };
@@ -75,7 +75,7 @@ export default function UpdatesPage() {
       <PageIntro
         eyebrow="Update status"
         title={`TNT Incremental Updates (${monthYear})`}
-        description="Use this page to separate official TNT Incremental update signals from community reports. The OG Incrementals Roblox page remains the source of record for core game facts."
+        description="Use this page to separate official TNT Incremental update signals from community reports for codes, Runes, upgrades, Rebirth, Ascend, and guide changes. The OG Incrementals Roblox page remains the source of record for core game facts."
       />
 
       <section className="mt-10">
@@ -118,6 +118,8 @@ export default function UpdatesPage() {
             <Link className="button-secondary" href="/sources">Review official source</Link>
             <Link className="button-secondary" href="/trello">Check Trello status</Link>
             <Link className="button-secondary" href="/codes">Check codes</Link>
+            <Link className="button-secondary" href="/wiki/runes">Runes wiki</Link>
+            <Link className="button-secondary" href="/guides">Read guides</Link>
             <a className="button-primary" href="https://www.roblox.com/games/79903287408965/TNT-Incremental" rel="nofollow noopener noreferrer" target="_blank">
               Open Roblox page
             </a>

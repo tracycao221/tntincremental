@@ -5,9 +5,21 @@ import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs, PageIntro, SectionHeader } from "@/components/ui/content";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.gameName} Sources`,
-  description: `Source and verification notes for ${siteConfig.gameName} codes, guides, wiki claims, and tier-list updates.`,
-  alternates: { canonical: `${siteConfig.domain}/sources` }
+  title: `${siteConfig.gameName} Sources - Official Roblox, Codes & Discord Status`,
+  description: `Source notes for ${siteConfig.gameName} official Roblox page, Release code, guides, wiki claims, Runes, Rebirth, Ascend, Discord, and tier-list updates.`,
+  alternates: { canonical: `${siteConfig.domain}/sources` },
+  openGraph: {
+    title: `${siteConfig.gameName} Sources - Official Roblox & Codes`,
+    description: `Source notes for ${siteConfig.gameName} official Roblox page, Release code, guides, wiki, Runes, Rebirth, and Ascend.`,
+    url: `${siteConfig.domain}/sources`,
+    images: ["/opengraph-image"]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.gameName} Sources - Official Roblox & Codes`,
+    description: `Official Roblox, code, guide, wiki, and source notes for ${siteConfig.gameName}.`,
+    images: ["/opengraph-image"]
+  }
 };
 
 export default function SourcesPage() {
@@ -18,7 +30,7 @@ export default function SourcesPage() {
       <PageIntro
         eyebrow="Verification"
         title={`${siteConfig.gameName} Sources`}
-        description="Use this page to see where code, tier-list, update, Trello, Discord, wiki, and guide claims are checked. The official Roblox page wins when sources disagree."
+        description="Use this page to see where code, tier-list, update, Trello, Discord, wiki, guide, Runes, Rebirth, and Ascend claims are checked. The official Roblox page wins when sources disagree."
       />
 
       <section className="mt-10">

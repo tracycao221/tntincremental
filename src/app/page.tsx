@@ -18,11 +18,11 @@ import { SectionHeader, TrustNote } from "@/components/ui/content";
 import { BrandHero } from "@/components/home/BrandHero";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.gameName} Wiki, Codes, Tier List and Tools`,
+  title: `${siteConfig.gameName} Codes, Guide & Wiki - Release, Runes & Rebirth`,
   description: siteConfig.description,
   alternates: { canonical: siteConfig.domain },
   openGraph: {
-    title: `${siteConfig.gameName} Wiki, Codes and Tools`,
+    title: `${siteConfig.gameName} Codes, Guide & Wiki`,
     description: siteConfig.description,
     url: siteConfig.domain,
     type: "website",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.gameName} Wiki, Codes and Tools`,
+    title: `${siteConfig.gameName} Codes, Guide & Wiki`,
     description: siteConfig.description,
     images: ["/opengraph-image"]
   }
@@ -60,9 +60,9 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-12">
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <SectionHeader
-            eyebrow="Freshness center"
-            title={`${siteConfig.gameName} codes and update status`}
-            copy="Codes are the highest-repeat Roblox search intent, so the homepage surfaces the latest verified set and sends players into the dedicated codes page."
+            eyebrow="Codes and guide shortcuts"
+            title={`${siteConfig.gameName} codes, guide and wiki status`}
+            copy="Start with the official Release code for free Potions, then jump into upgrades, Rebirth, Runes, Ascend, wiki notes, or source-checked updates."
           />
           <Link className="button-secondary" href="/codes">
             View all codes
@@ -86,8 +86,8 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeader
             eyebrow="Tier preview"
-            title={`${siteConfig.gameName} ranking status`}
-            copy="The page tracks confirmed systems first. Exact best-rune and best-upgrade rankings stay held until effects, odds, costs, and reset values are tested."
+            title={`${siteConfig.gameName} runes and upgrade ranking status`}
+            copy="The page tracks confirmed systems first. Exact best-rune, best-upgrade, Rebirth, and Ascend rankings stay held until effects, odds, costs, and reset values are tested."
           />
           <div className="grid gap-4 md:grid-cols-3">
             {tierPreview.map((item) => (
@@ -106,9 +106,9 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-7xl px-4 py-12">
         <SectionHeader
-          eyebrow="Core tools"
-          title="Tools players can use immediately"
-          copy="Start with codes, tier list, calculator, and source checks before spending rare resources or committing to a build."
+          eyebrow="Core pages"
+          title="Codes, guide, wiki and calculator"
+          copy="Use these core pages before spending Potions, Tree Crystals, Runes, or reset progress through Rebirth and Ascend."
         />
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {toolCards.map((tool) => (
@@ -126,8 +126,8 @@ export default function HomePage() {
           <div>
             <SectionHeader
               eyebrow="Guides"
-              title="Pick the next problem to solve"
-              copy="Use these guides when you need beginner advice, safer upgrade choices, farming routes, or advanced strategy."
+              title={`${siteConfig.gameName} guide paths`}
+              copy="Use these guides for Drop TNT, Cash, upgrades, Rebirth, Upgrade Tree decisions, Runes, and Ascend planning."
             />
             <div className="mt-6 grid gap-3">
               {guideClusters.map((guide) => (

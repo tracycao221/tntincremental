@@ -8,7 +8,19 @@ import { Breadcrumbs, PageIntro, SectionHeader } from "@/components/ui/content";
 export const metadata: Metadata = {
   title: `${siteConfig.gameName} Trello, Discord & Wiki Status`,
   description: `Official-link status for ${siteConfig.gameName} Trello, Discord, wiki, Roblox updates, codes, and community sources.`,
-  alternates: { canonical: `${siteConfig.domain}/trello` }
+  alternates: { canonical: `${siteConfig.domain}/trello` },
+  openGraph: {
+    title: `${siteConfig.gameName} Trello, Discord & Wiki Status`,
+    description: `Official Roblox, Discord, Trello, wiki, codes, and update-source status for ${siteConfig.gameName}.`,
+    url: `${siteConfig.domain}/trello`,
+    images: ["/opengraph-image"]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.gameName} Trello, Discord & Wiki Status`,
+    description: `Source status for ${siteConfig.gameName} Roblox, Discord, Trello, wiki, and codes.`,
+    images: ["/opengraph-image"]
+  }
 };
 
 const statusRows = [

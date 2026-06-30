@@ -26,9 +26,21 @@ const guides = [
 ];
 
 export const metadata: Metadata = {
-  title: "TNT Incremental Guides (June 2026)",
-  description: "TNT Incremental guides for Rebirth, Upgrade Tree, Ascend and source-safe progression planning.",
-  alternates: { canonical: `${siteConfig.domain}/guides` }
+  title: "TNT Incremental Guide - Upgrades, Rebirth, Runes & Ascend",
+  description: "TNT Incremental guide hub for Drop TNT, Cash, upgrades, Rebirth, Upgrade Tree, Runes, Ascend, codes, and source-safe progression planning.",
+  alternates: { canonical: `${siteConfig.domain}/guides` },
+  openGraph: {
+    title: "TNT Incremental Guide - Upgrades, Rebirth, Runes & Ascend",
+    description: "Source-safe TNT Incremental guide hub for codes, upgrades, Rebirth, Upgrade Tree, Runes, and Ascend.",
+    url: `${siteConfig.domain}/guides`,
+    images: ["/opengraph-image"]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TNT Incremental Guide - Upgrades, Rebirth, Runes & Ascend",
+    description: "Guide hub for TNT Incremental codes, upgrades, Rebirth, Runes, and Ascend.",
+    images: ["/opengraph-image"]
+  }
 };
 
 export default function GuidesPage() {
@@ -38,8 +50,8 @@ export default function GuidesPage() {
       <Breadcrumbs items={[{ label: "Guides", href: "/guides" }]} />
       <PageIntro
         eyebrow="Guide hub"
-        title="TNT Incremental Guides"
-        description="Use these guides for the confirmed TNT Incremental progression loop: Drop TNT, earn Cash, buy Upgrades, Rebirth, roll Runes and Ascend."
+        title="TNT Incremental Guide Hub"
+        description="Use this TNT Incremental guide hub for the confirmed progression loop: Drop TNT, earn Cash, buy upgrades, Rebirth, use the Upgrade Tree, roll Runes, and plan Ascend."
       />
 
       <section className="mt-10">
@@ -56,6 +68,20 @@ export default function GuidesPage() {
               <p className="mt-2 text-sm leading-6 text-white/65">{guide.description}</p>
             </Link>
           ))}
+        </div>
+      </section>
+      <section className="mt-10">
+        <SectionHeader
+          eyebrow="Quick routes"
+          title="Codes, wiki, runes, and calculator"
+          copy="These pages answer the most common next questions after the guide: active code status, rune names, held values, and manual planning."
+        />
+        <div className="mt-5 flex flex-wrap gap-3">
+          <Link className="button-secondary" href="/codes">Get Release code</Link>
+          <Link className="button-secondary" href="/wiki">Open wiki</Link>
+          <Link className="button-secondary" href="/wiki/runes">Runes wiki</Link>
+          <Link className="button-secondary" href="/calculator">Use calculator</Link>
+          <Link className="button-secondary" href="/sources">Check sources</Link>
         </div>
       </section>
     </main>

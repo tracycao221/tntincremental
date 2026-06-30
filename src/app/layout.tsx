@@ -15,7 +15,7 @@ const adsenseClientId = runtimeConfig.adsenseClientId;
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: `${siteConfig.gameName} Wiki, Codes, Tier List and Tools`,
+    default: `${siteConfig.gameName} Codes, Guide & Wiki`,
     template: `%s | ${siteConfig.gameName}`
   },
   description: siteConfig.description,
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     type: "website",
     url: siteConfig.domain,
     siteName: siteConfig.name,
-    title: `${siteConfig.gameName} Wiki, Codes and Tools`,
+    title: `${siteConfig.gameName} Codes, Guide & Wiki`,
     description: siteConfig.description,
     images: [{ url: "/opengraph-image" }]
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.gameName} Wiki, Codes and Tools`,
+    title: `${siteConfig.gameName} Codes, Guide & Wiki`,
     description: siteConfig.description,
     images: ["/opengraph-image"]
   },

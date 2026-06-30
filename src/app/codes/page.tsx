@@ -49,6 +49,10 @@ const faqItems = [
     a: "Check spelling, capitalization, and server freshness. If a code panel rejects it, treat it as expired or temporarily unavailable and check the official Roblox page or Discord for changes."
   },
   {
+    q: "What should I do after using a TNT Incremental code?",
+    a: "Use Potions carefully, then check the upgrades, Rebirth, Runes, Ascend, and calculator pages before making bigger progression decisions."
+  },
+  {
     q: "Is this the official TNT Incremental codes page?",
     a: "No. This is an unofficial fan-made tracker that links back to the official OG Incrementals Roblox page as the source of record."
   }
@@ -57,19 +61,19 @@ const faqItems = [
 const buildFaqSchema = faqItems;
 
 export const metadata: Metadata = {
-  title: `TNT Incremental Codes (${monthYear}) - Release Code`,
-  description: "Track TNT Incremental codes with source notes. Release is the confirmed official-page code for free Potions, with community-reported codes kept separate.",
+  title: `TNT Incremental Codes (${monthYear}) - Release for Free Potions`,
+  description: "Get the official TNT Incremental Release code for free Potions, community-reported code watchlist, redeem tips, and links to Runes, Rebirth, Ascend, and upgrades.",
   alternates: { canonical: `${siteConfig.domain}/codes` },
   openGraph: {
-    title: `TNT Incremental Codes (${monthYear})`,
-    description: "Release is the confirmed TNT Incremental code mention from the official OG Incrementals Roblox page.",
+    title: `TNT Incremental Codes (${monthYear}) - Release Code`,
+    description: "Release is the confirmed TNT Incremental code mention from the official OG Incrementals Roblox page, with guide links for Runes, Rebirth, Ascend, and upgrades.",
     url: `${siteConfig.domain}/codes`,
     images: ["/opengraph-image"]
   },
   twitter: {
     card: "summary_large_image",
-    title: `TNT Incremental Codes (${monthYear})`,
-    description: "Source-checked TNT Incremental codes and freshness notes.",
+    title: `TNT Incremental Codes (${monthYear}) - Release Code`,
+    description: "Source-checked TNT Incremental codes, redeem notes, and progression links.",
     images: ["/opengraph-image"]
   }
 };
@@ -84,7 +88,7 @@ export default function CodesPage() {
       <PageIntro
         eyebrow="Checked: June 29, 2026"
         title={`TNT Incremental Codes (${monthYear})`}
-        description="Use this page for source-checked TNT Incremental codes. Release is the official-page code for free Potions; community-reported codes are listed separately so they do not look official."
+        description="Use this page for source-checked TNT Incremental codes. Release is the official-page code for free Potions; community-reported codes are listed separately, with guide links for upgrades, Rebirth, Runes, and Ascend."
       />
 
       <section className="mt-10">
@@ -129,13 +133,15 @@ export default function CodesPage() {
           <SectionHeader
             eyebrow="Use your rewards well"
             title="Why these codes matter"
-            copy="The official page says Release gives free Potions. Potion effects can affect planning, so the calculator stays manual instead of inventing boost values."
+            copy="The official page says Release gives free Potions. Potion effects can affect planning, so use the guide and calculator pages without relying on invented boost values."
           />
           <div className="mt-5 flex flex-wrap gap-3">
             <Link className="button-secondary" href="/calculator">Open calculator</Link>
+            <Link className="button-secondary" href="/guides">Read guide</Link>
+            <Link className="button-secondary" href="/guides/rebirth">Rebirth guide</Link>
+            <Link className="button-secondary" href="/wiki/runes">Runes wiki</Link>
+            <Link className="button-secondary" href="/guides/ascend">Ascend guide</Link>
             <Link className="button-secondary" href="/sources">Verify source</Link>
-            <Link className="button-secondary" href="/tier-list">View ranking status</Link>
-            <Link className="button-secondary" href="/updates">Check updates</Link>
           </div>
         </article>
       </section>

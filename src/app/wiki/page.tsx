@@ -9,32 +9,44 @@ const topics = [
     title: "Runes",
     href: "/wiki/runes",
     eyebrow: "Confirmed mechanic",
-    description: "Basic, Fire, Gem and Mining runes are confirmed by the official page. Effects and odds still need verification."
+    description: "Basic, Fire, Gem and Mining runes are confirmed by the official page. Effects, odds, rarity and best-use claims are held until tested."
   },
   {
     title: "Potions",
     href: "/wiki/potions",
     eyebrow: "Code reward",
-    description: "The official Release code mentions free Potions. Potion types and effects still need verification."
+    description: "The official Release code mentions free Potions. Potion types, durations, effects and stacking notes stay source-labelled."
   },
   {
     title: "Leaderboards",
     href: "/wiki/leaderboards",
     eyebrow: "Progression",
-    description: "Leaderboards are confirmed by the official page. Categories and scoring rules still need verification."
+    description: "Leaderboards are confirmed by the official page. Categories, scoring rules, and reward claims are held for source-backed checks."
   },
   {
     title: "Upgrade Tree",
     href: "/guides/upgrade-tree",
     eyebrow: "Guide",
-    description: "Tree Crystals and global boosts are confirmed. Node values and priorities still need data."
+    description: "Tree Crystals and global boosts are confirmed. Node values and priority rankings stay held until tested."
   }
 ];
 
 export const metadata: Metadata = {
-  title: "TNT Incremental Wiki (June 2026)",
-  description: "TNT Incremental wiki hub for confirmed mechanics, runes, potions, leaderboards and source-labelled data gaps.",
-  alternates: { canonical: `${siteConfig.domain}/wiki` }
+  title: "TNT Incremental Wiki - Runes, Upgrades, Rebirth & Ascend",
+  description: "TNT Incremental wiki hub for confirmed Runes, Potions, Leaderboards, upgrades, Rebirth, Ascend, codes, and source-labelled data gaps.",
+  alternates: { canonical: `${siteConfig.domain}/wiki` },
+  openGraph: {
+    title: "TNT Incremental Wiki - Runes, Upgrades, Rebirth & Ascend",
+    description: "Confirmed TNT Incremental wiki notes for Runes, Potions, Leaderboards, upgrades, Rebirth, Ascend, and codes.",
+    url: `${siteConfig.domain}/wiki`,
+    images: ["/opengraph-image"]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TNT Incremental Wiki - Runes, Upgrades, Rebirth & Ascend",
+    description: "Wiki notes for TNT Incremental Runes, upgrades, Rebirth, Ascend, and codes.",
+    images: ["/opengraph-image"]
+  }
 };
 
 export default function WikiPage() {
@@ -45,14 +57,14 @@ export default function WikiPage() {
       <PageIntro
         eyebrow="Source-aware wiki"
         title="TNT Incremental Wiki"
-        description="Use this hub for confirmed TNT Incremental mechanics and visible data gaps. Official source facts come from the OG Incrementals Roblox page only."
+        description="Use this hub for confirmed TNT Incremental mechanics: codes, upgrades, Rebirth, Upgrade Tree, Runes, Ascend, Potions, and Leaderboards. Official source facts come from the OG Incrementals Roblox page only."
       />
 
       <section className="mt-10">
         <SectionHeader
           eyebrow="Game topics"
-          title="Confirmed mechanics and pages to verify"
-          copy="Every topic separates what is confirmed from what still needs a source-backed value."
+          title="Confirmed mechanics and source-labelled notes"
+          copy="Every topic separates confirmed mechanics from values that need in-game testing or creator-owned source notes."
         />
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {topics.map((card) => (
@@ -62,6 +74,20 @@ export default function WikiPage() {
               <p className="mt-2 text-sm leading-6 text-white/65">{card.description}</p>
             </Link>
           ))}
+        </div>
+      </section>
+      <section className="mt-10">
+        <SectionHeader
+          eyebrow="Guide routes"
+          title="Go from wiki notes to progression help"
+          copy="Use these links when a wiki topic turns into a planning question about codes, upgrades, Rebirth, Runes, or Ascend."
+        />
+        <div className="mt-5 flex flex-wrap gap-3">
+          <Link className="button-secondary" href="/codes">Get Release code</Link>
+          <Link className="button-secondary" href="/guides">Read guide</Link>
+          <Link className="button-secondary" href="/guides/rebirth">Rebirth guide</Link>
+          <Link className="button-secondary" href="/guides/ascend">Ascend guide</Link>
+          <Link className="button-secondary" href="/calculator">Use calculator</Link>
         </div>
       </section>
     </main>
