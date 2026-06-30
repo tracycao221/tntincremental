@@ -18,11 +18,11 @@ import { SectionHeader, TrustNote } from "@/components/ui/content";
 import { BrandHero } from "@/components/home/BrandHero";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.gameName} Codes, Guide & Wiki - Release, Runes & Rebirth`,
+  title: `${siteConfig.gameName} Codes & Guide - Release Code, Runes, Rebirth`,
   description: siteConfig.description,
   alternates: { canonical: siteConfig.domain },
   openGraph: {
-    title: `${siteConfig.gameName} Codes, Guide & Wiki`,
+    title: `${siteConfig.gameName} Codes & Guide`,
     description: siteConfig.description,
     url: siteConfig.domain,
     type: "website",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.gameName} Codes, Guide & Wiki`,
+    title: `${siteConfig.gameName} Codes & Guide`,
     description: siteConfig.description,
     images: ["/opengraph-image"]
   }
@@ -61,11 +61,11 @@ export default function HomePage() {
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <SectionHeader
             eyebrow="Codes and guide shortcuts"
-            title={`${siteConfig.gameName} codes, guide and wiki status`}
-            copy="Start with the official Release code for free Potions, then jump into upgrades, Rebirth, Runes, Ascend, wiki notes, or source-checked updates."
+            title={`${siteConfig.gameName} codes, Release code and guide`}
+            copy="Start with the official Release code for free Potions, then open the guide, upgrades, Rebirth, Runes, Ascend, wiki notes, or source-checked updates."
           />
           <Link className="button-secondary" href="/codes">
-            View all codes
+            View TNT Incremental codes
           </Link>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -107,7 +107,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-12">
         <SectionHeader
           eyebrow="Core pages"
-          title="Codes, guide, wiki and calculator"
+          title="Codes, guide, calculator and wiki"
           copy="Use these core pages before spending Potions, Tree Crystals, Runes, or reset progress through Rebirth and Ascend."
         />
         <div className="mt-6 grid gap-4 md:grid-cols-3">

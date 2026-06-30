@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
-import { getCurrentMonthYear } from "@/lib/site-date";
 import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs, PageIntro, SectionHeader } from "@/components/ui/content";
 import { CopyButton } from "@/components/ui/CopyButton";
-
-const monthYear = getCurrentMonthYear();
 
 const codes = [
   {
@@ -53,6 +50,10 @@ const faqItems = [
     a: "Use Potions carefully, then check the upgrades, Rebirth, Runes, Ascend, and calculator pages before making bigger progression decisions."
   },
   {
+    q: "Do TNT Incremental codes change upgrade, Rebirth, Rune, or Ascend values?",
+    a: "The official page only confirms Release for free Potions. This page does not claim hidden upgrade, Rebirth, Rune, or Ascend values from codes unless they are source-backed."
+  },
+  {
     q: "Is this the official TNT Incremental codes page?",
     a: "No. This is an unofficial fan-made tracker that links back to the official OG Incrementals Roblox page as the source of record."
   }
@@ -61,19 +62,19 @@ const faqItems = [
 const buildFaqSchema = faqItems;
 
 export const metadata: Metadata = {
-  title: `TNT Incremental Codes (${monthYear}) - Release for Free Potions`,
-  description: "Get the official TNT Incremental Release code for free Potions, community-reported code watchlist, redeem tips, and links to Runes, Rebirth, Ascend, and upgrades.",
+  title: "TNT Incremental Codes - Release Code & Free Potions",
+  description: "Check TNT Incremental codes and the official Release code for free Potions, with redeem tips and links to upgrades, Rebirth, Runes, Ascend, and calculator pages.",
   alternates: { canonical: `${siteConfig.domain}/codes` },
   openGraph: {
-    title: `TNT Incremental Codes (${monthYear}) - Release Code`,
+    title: "TNT Incremental Codes - Release Code",
     description: "Release is the confirmed TNT Incremental code mention from the official OG Incrementals Roblox page, with guide links for Runes, Rebirth, Ascend, and upgrades.",
     url: `${siteConfig.domain}/codes`,
     images: ["/opengraph-image"]
   },
   twitter: {
     card: "summary_large_image",
-    title: `TNT Incremental Codes (${monthYear}) - Release Code`,
-    description: "Source-checked TNT Incremental codes, redeem notes, and progression links.",
+    title: "TNT Incremental Codes - Release Code",
+    description: "Source-checked TNT Incremental codes, Release redeem notes, and progression links.",
     images: ["/opengraph-image"]
   }
 };
@@ -87,8 +88,8 @@ export default function CodesPage() {
 
       <PageIntro
         eyebrow="Checked: June 29, 2026"
-        title={`TNT Incremental Codes (${monthYear})`}
-        description="Use this page for source-checked TNT Incremental codes. Release is the official-page code for free Potions; community-reported codes are listed separately, with guide links for upgrades, Rebirth, Runes, and Ascend."
+        title={`TNT Incremental Codes and Release Code`}
+        description="Use this page for source-checked TNT Incremental codes. Release is the official-page code for free Potions; community-reported codes are listed separately, with guide links for upgrades, Rebirth, Runes, Ascend, and the calculator."
       />
 
       <section className="mt-10">
@@ -136,8 +137,9 @@ export default function CodesPage() {
             copy="The official page says Release gives free Potions. Potion effects can affect planning, so use the guide and calculator pages without relying on invented boost values."
           />
           <div className="mt-5 flex flex-wrap gap-3">
-            <Link className="button-secondary" href="/calculator">Open calculator</Link>
-            <Link className="button-secondary" href="/guides">Read guide</Link>
+            <Link className="button-secondary" href="/calculator">TNT Incremental calculator</Link>
+            <Link className="button-secondary" href="/guides">TNT Incremental guide</Link>
+            <Link className="button-secondary" href="/guides/upgrade-tree">Upgrades guide</Link>
             <Link className="button-secondary" href="/guides/rebirth">Rebirth guide</Link>
             <Link className="button-secondary" href="/wiki/runes">Runes wiki</Link>
             <Link className="button-secondary" href="/guides/ascend">Ascend guide</Link>

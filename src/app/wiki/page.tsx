@@ -32,19 +32,19 @@ const topics = [
 ];
 
 export const metadata: Metadata = {
-  title: "TNT Incremental Wiki - Runes, Upgrades, Rebirth & Ascend",
-  description: "TNT Incremental wiki hub for confirmed Runes, Potions, Leaderboards, upgrades, Rebirth, Ascend, codes, and source-labelled data gaps.",
+  title: "TNT Incremental Wiki - Codes, Runes, Upgrades & Ascend",
+  description: "Open the TNT Incremental wiki for Release code notes, confirmed Runes, Potions, Leaderboards, upgrades, Rebirth, Ascend, and source-labelled data gaps.",
   alternates: { canonical: `${siteConfig.domain}/wiki` },
   openGraph: {
-    title: "TNT Incremental Wiki - Runes, Upgrades, Rebirth & Ascend",
-    description: "Confirmed TNT Incremental wiki notes for Runes, Potions, Leaderboards, upgrades, Rebirth, Ascend, and codes.",
+    title: "TNT Incremental Wiki - Codes, Runes, Upgrades & Ascend",
+    description: "Confirmed TNT Incremental wiki notes for Release code, Runes, Potions, Leaderboards, upgrades, Rebirth, and Ascend.",
     url: `${siteConfig.domain}/wiki`,
     images: ["/opengraph-image"]
   },
   twitter: {
     card: "summary_large_image",
-    title: "TNT Incremental Wiki - Runes, Upgrades, Rebirth & Ascend",
-    description: "Wiki notes for TNT Incremental Runes, upgrades, Rebirth, Ascend, and codes.",
+    title: "TNT Incremental Wiki - Codes, Runes, Upgrades & Ascend",
+    description: "Wiki notes for TNT Incremental Release code, Runes, upgrades, Rebirth, and Ascend.",
     images: ["/opengraph-image"]
   }
 };
@@ -57,7 +57,7 @@ export default function WikiPage() {
       <PageIntro
         eyebrow="Source-aware wiki"
         title="TNT Incremental Wiki"
-        description="Use this hub for confirmed TNT Incremental mechanics: codes, upgrades, Rebirth, Upgrade Tree, Runes, Ascend, Potions, and Leaderboards. Official source facts come from the OG Incrementals Roblox page only."
+        description="Use this hub for confirmed TNT Incremental mechanics: Release code notes, upgrades, Rebirth, Upgrade Tree, Runes, Ascend, Potions, and Leaderboards. Official source facts come from the OG Incrementals Roblox page only."
       />
 
       <section className="mt-10">
@@ -83,11 +83,11 @@ export default function WikiPage() {
           copy="Use these links when a wiki topic turns into a planning question about codes, upgrades, Rebirth, Runes, or Ascend."
         />
         <div className="mt-5 flex flex-wrap gap-3">
-          <Link className="button-secondary" href="/codes">Get Release code</Link>
-          <Link className="button-secondary" href="/guides">Read guide</Link>
+          <Link className="button-secondary" href="/codes">TNT Incremental codes</Link>
+          <Link className="button-secondary" href="/guides">TNT Incremental guide</Link>
           <Link className="button-secondary" href="/guides/rebirth">Rebirth guide</Link>
           <Link className="button-secondary" href="/guides/ascend">Ascend guide</Link>
-          <Link className="button-secondary" href="/calculator">Use calculator</Link>
+          <Link className="button-secondary" href="/calculator">TNT Incremental calculator</Link>
         </div>
       </section>
     </main>

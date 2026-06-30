@@ -5,11 +5,11 @@ export const siteConfig: SiteConfig = {
   name: `${gameConfig.name} Wiki`,
   domain: gameConfig.domain,
   gameName: gameConfig.name,
-  description: `${gameConfig.name} codes, guide, and wiki for Release, upgrades, Rebirth, Runes, Ascend, source-checked update notes, and a manual Roblox progression calculator.`,
-  valueProposition: `Get the official Release code, then jump into upgrades, Rebirth, Runes, Ascend, and wiki notes without fake rewards or invented stats.`,
+  description: `Check ${gameConfig.name} codes, the Release code reward, beginner guide, upgrades, Rebirth, Runes, Ascend, wiki notes, and a manual Roblox calculator.`,
+  valueProposition: `Check the official Release code, then use the TNT Incremental guide, wiki, upgrades, Rebirth, Runes, Ascend, and calculator pages without fake rewards or invented stats.`,
   shortDisclosure: `${gameConfig.name} Wiki is an unofficial fan-made resource. Roblox and the game creators remain the source of record for official support and updates.`,
-  lastUpdated: "2026-06-29",
-  freshnessLabel: "Release code, guide, wiki, and source notes checked",
+  lastUpdated: "2026-06-30",
+  freshnessLabel: "Release code, guide, wiki, calculator, and source notes checked",
   keywords: [
     `${gameConfig.name}`,
     `${gameConfig.name} codes`,
@@ -69,10 +69,10 @@ export const siteConfig: SiteConfig = {
 };
 
 export const heroActions = [
-  { href: "/codes", label: "Get codes" },
-  { href: "/guides", label: "Read guide" },
+  { href: "/codes", label: "TNT Incremental codes" },
+  { href: "/guides", label: "Beginner guide" },
   { href: "/wiki/runes", label: "Runes wiki" },
-  { href: "/calculator", label: "Plan progress" }
+  { href: "/calculator", label: "Calculator" }
 ] as const;
 
 export const heroMetrics: HeroMetric[] = [
@@ -124,7 +124,7 @@ export const tierPreview: TierPreviewItem[] = [
 
 export const toolCards: LinkCard[] = [
   {
-    title: `${gameConfig.name} Calculator`,
+    title: `${gameConfig.name} Calculator for Cash and Rebirth`,
     href: "/calculator",
     eyebrow: "Primary tool",
     description: "Manual planner for Cash goals, Upgrade targets, Rebirth timing, Rune planning, and Ascend preparation."
@@ -136,7 +136,7 @@ export const toolCards: LinkCard[] = [
     description: "Ranking-status page for Runes, Upgrade Tree priorities, Rebirth value, and Ascend planning."
   },
   {
-    title: `${gameConfig.name} Codes`,
+    title: `${gameConfig.name} Codes and Release Code`,
     href: "/codes",
     eyebrow: "Codes",
     description: "Tracks the official Release code for free Potions and keeps community-reported codes clearly separated."
@@ -157,19 +157,19 @@ export const toolCards: LinkCard[] = [
 
 export const guideClusters: LinkCard[] = [
   {
-    title: "Beginner guide",
+    title: `${gameConfig.name} beginner guide`,
     href: "/guides",
     eyebrow: "Guide",
     description: "Start with Drop TNT, Cash, upgrades, Rebirth, Upgrade Tree, Runes, Ascend, and Leaderboards."
   },
   {
-    title: "Progression guide",
+    title: "Upgrade Tree and Rebirth guide",
     href: "/guides/upgrade-tree",
     eyebrow: "Guide",
     description: "Understand Tree Crystals and global boosts without fake node values."
   },
   {
-    title: "Advanced strategy",
+    title: "Runes and Ascend guide",
     href: "/guides/ascend",
     eyebrow: "Guide",
     description: "Plan Ascend around Big Rune and Cash boosts with conservative timing notes."
@@ -273,6 +273,14 @@ export const faqs: Record<"home" | "codes" | "tierList" | "calculator", FaqItem[
       a: "Start with the Release code, then use the guide hub for upgrades, Rebirth, Runes, and Ascend. Use the calculator for manual Cash and target-cost planning."
     },
     {
+      q: `What is the confirmed ${gameConfig.name} Release code reward?`,
+      a: "The official Roblox page says Release gives free Potions. This site does not add extra reward amounts or new code claims unless a source supports them."
+    },
+    {
+      q: `Which ${gameConfig.name} guide should I open after codes?`,
+      a: "Open the beginner guide for the full loop, then use the Upgrade Tree, Rebirth, Runes, Ascend, and calculator pages when you need more specific planning."
+    },
+    {
       q: `What pages should be expanded first?`,
       a: "Start with codes, updates, source status, calculator, Rebirth, Upgrade Tree, Ascend, Runes, Potions, and Leaderboards."
     }
@@ -285,6 +293,10 @@ export const faqs: Record<"home" | "codes" | "tierList" | "calculator", FaqItem[
     {
       q: "Why are some codes marked community reported?",
       a: "Community-reported codes may be useful, but they are not listed as official unless they appear on the Roblox page or are confirmed in game."
+    },
+    {
+      q: "What should I check after the Release code?",
+      a: "Use the guide, upgrades, Rebirth, Runes, Ascend, and calculator pages to plan next steps without relying on unverified code rewards."
     }
   ],
   tierList: [
@@ -297,6 +309,10 @@ export const faqs: Record<"home" | "codes" | "tierList" | "calculator", FaqItem[
     {
       q: "Is the calculator exact?",
       a: "No. It is a manual planner that uses your own Cash and rate inputs because exact TNT Incremental formulas are not published here as official facts."
+    },
+    {
+      q: "Can the calculator help with upgrades, Rebirth, Runes, and Ascend?",
+      a: "Yes. Use it as a manual planning aid beside the guide pages; it does not invent hidden formulas, probabilities, or boost values."
     }
   ]
 };
