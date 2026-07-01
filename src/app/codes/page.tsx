@@ -62,19 +62,19 @@ const faqItems = [
 const buildFaqSchema = faqItems;
 
 export const metadata: Metadata = {
-  title: "TNT Incremental Codes - Release Code & Free Potions",
-  description: "Check TNT Incremental codes and the official Release code for free Potions, with redeem tips and links to upgrades, Rebirth, Runes, Ascend, and calculator pages.",
+  title: "TNT Incremental Codes - Release Code for Free Potions",
+  description: "Check the TNT Incremental Release code for free Potions, separated community code reports, redeem tips, and guide links for Runes, Rebirth, Ascend, and upgrades.",
   alternates: { canonical: `${siteConfig.domain}/codes` },
   openGraph: {
-    title: "TNT Incremental Codes - Release Code",
+    title: "TNT Incremental Codes - Release Code for Free Potions",
     description: "Release is the confirmed TNT Incremental code mention from the official OG Incrementals Roblox page, with guide links for Runes, Rebirth, Ascend, and upgrades.",
     url: `${siteConfig.domain}/codes`,
     images: ["/opengraph-image"]
   },
   twitter: {
     card: "summary_large_image",
-    title: "TNT Incremental Codes - Release Code",
-    description: "Source-checked TNT Incremental codes, Release redeem notes, and progression links.",
+    title: "TNT Incremental Codes - Release Code for Free Potions",
+    description: "Source-checked TNT Incremental Release code notes, free Potions, and progression links.",
     images: ["/opengraph-image"]
   }
 };
@@ -88,7 +88,7 @@ export default function CodesPage() {
 
       <PageIntro
         eyebrow="Checked: June 29, 2026"
-        title={`TNT Incremental Codes and Release Code`}
+        title="TNT Incremental Codes - Release Code for Free Potions"
         description="Use this page for source-checked TNT Incremental codes. Release is the official-page code for free Potions; community-reported codes are listed separately, with guide links for upgrades, Rebirth, Runes, Ascend, and the calculator."
       />
 
@@ -137,8 +137,8 @@ export default function CodesPage() {
             copy="The official page says Release gives free Potions. Potion effects can affect planning, so use the guide and calculator pages without relying on invented boost values."
           />
           <div className="mt-5 flex flex-wrap gap-3">
-            <Link className="button-secondary" href="/calculator">TNT Incremental calculator</Link>
-            <Link className="button-secondary" href="/guides">TNT Incremental guide</Link>
+            <Link className="button-secondary" href="/calculator">Cash and Rebirth calculator</Link>
+            <Link className="button-secondary" href="/guides">TNT Incremental guide after codes</Link>
             <Link className="button-secondary" href="/guides/upgrade-tree">Upgrades guide</Link>
             <Link className="button-secondary" href="/guides/rebirth">Rebirth guide</Link>
             <Link className="button-secondary" href="/wiki/runes">Runes wiki</Link>

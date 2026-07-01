@@ -6,18 +6,18 @@ import { BreadcrumbJsonLd, FaqJsonLd, SoftwareApplicationJsonLd } from "@/compon
 import { Breadcrumbs, PageIntro, SectionHeader } from "@/components/ui/content";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.gameName} Calculator - Cash, Upgrades & Rebirth Planner`,
-  description: `Use the manual ${siteConfig.gameName} calculator for Cash goals, upgrade targets, Rebirth timing, Rune planning, Ascend prep, and guide-side estimates.`,
+  title: `${siteConfig.gameName} Calculator - Cash, Rebirth, Runes & Ascend`,
+  description: `Use the manual ${siteConfig.gameName} calculator for Cash goals, upgrade targets, Rebirth timing, Rune planning, Ascend prep, and guide-side estimates after codes.`,
   alternates: { canonical: `${siteConfig.domain}/calculator` },
   openGraph: {
-    title: `${siteConfig.gameName} Calculator - Cash, Upgrades & Rebirth`,
+    title: `${siteConfig.gameName} Calculator - Cash, Rebirth, Runes & Ascend`,
     description: `Manual ${siteConfig.gameName} planner for Cash, upgrades, Runes, Rebirth, Ascend, and guide-side estimates.`,
     url: `${siteConfig.domain}/calculator`,
     images: ["/opengraph-image"]
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.gameName} Calculator - Cash, Upgrades & Rebirth`,
+    title: `${siteConfig.gameName} Calculator - Cash, Rebirth, Runes & Ascend`,
     description: `Manual planner for ${siteConfig.gameName} Cash, upgrades, Runes, Rebirth, Ascend, and guide-side estimates.`,
     images: ["/opengraph-image"]
   }
@@ -45,7 +45,7 @@ export default function CalculatorPage() {
           copy="Keep the tool next to source-safe pages for codes, upgrades, Rebirth, Runes, and Ascend so manual estimates stay grounded."
         />
         <div className="mt-5 flex flex-wrap gap-3">
-          <Link className="button-secondary" href="/codes">TNT Incremental codes</Link>
+          <Link className="button-secondary" href="/codes">Release code for free Potions</Link>
           <Link className="button-secondary" href="/guides/upgrade-tree">Upgrade Tree guide</Link>
           <Link className="button-secondary" href="/guides/rebirth">Rebirth guide</Link>
           <Link className="button-secondary" href="/wiki/runes">Runes wiki</Link>

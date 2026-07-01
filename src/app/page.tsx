@@ -18,11 +18,11 @@ import { SectionHeader, TrustNote } from "@/components/ui/content";
 import { BrandHero } from "@/components/home/BrandHero";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.gameName} Codes & Guide - Release Code, Runes, Rebirth`,
+  title: `${siteConfig.gameName} Codes - Release Code, Free Potions & Guide`,
   description: siteConfig.description,
   alternates: { canonical: siteConfig.domain },
   openGraph: {
-    title: `${siteConfig.gameName} Codes & Guide`,
+    title: `${siteConfig.gameName} Codes - Release Code & Guide`,
     description: siteConfig.description,
     url: siteConfig.domain,
     type: "website",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.gameName} Codes & Guide`,
+    title: `${siteConfig.gameName} Codes - Release Code & Guide`,
     description: siteConfig.description,
     images: ["/opengraph-image"]
   }
@@ -61,11 +61,11 @@ export default function HomePage() {
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <SectionHeader
             eyebrow="Codes and guide shortcuts"
-            title={`${siteConfig.gameName} codes, Release code and guide`}
+          title={`${siteConfig.gameName} Release code, free Potions and guide`}
             copy="Start with the official Release code for free Potions, then open the guide, upgrades, Rebirth, Runes, Ascend, wiki notes, or source-checked updates."
           />
           <Link className="button-secondary" href="/codes">
-            View TNT Incremental codes
+            Check Release code
           </Link>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -86,7 +86,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeader
             eyebrow="Tier preview"
-            title={`${siteConfig.gameName} runes and upgrade ranking status`}
+          title={`${siteConfig.gameName} Runes, Rebirth and upgrade ranking status`}
             copy="The page tracks confirmed systems first. Exact best-rune, best-upgrade, Rebirth, and Ascend rankings stay held until effects, odds, costs, and reset values are tested."
           />
           <div className="grid gap-4 md:grid-cols-3">
@@ -107,7 +107,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-12">
         <SectionHeader
           eyebrow="Core pages"
-          title="Codes, guide, calculator and wiki"
+          title="Release code, guide, calculator and wiki"
           copy="Use these core pages before spending Potions, Tree Crystals, Runes, or reset progress through Rebirth and Ascend."
         />
         <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -126,7 +126,7 @@ export default function HomePage() {
           <div>
             <SectionHeader
               eyebrow="Guides"
-              title={`${siteConfig.gameName} guide paths`}
+              title={`${siteConfig.gameName} guide paths after codes`}
               copy="Use these guides for Drop TNT, Cash, upgrades, Rebirth, Upgrade Tree decisions, Runes, and Ascend planning."
             />
             <div className="mt-6 grid gap-3">
@@ -144,7 +144,7 @@ export default function HomePage() {
           <div>
           <SectionHeader
             eyebrow="Wiki coverage"
-            title="Rune, potion, and leaderboard notes"
+            title="Rune, Potion, Rebirth and Ascend notes"
             copy="The wiki covers TNT Incremental systems confirmed by the official Roblox page, while exact values stay clearly separated from confirmed facts."
             />
             <div className="mt-6 grid gap-3">

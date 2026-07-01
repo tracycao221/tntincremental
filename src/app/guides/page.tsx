@@ -26,19 +26,19 @@ const guides = [
 ];
 
 export const metadata: Metadata = {
-  title: "TNT Incremental Guide - Codes, Upgrades, Rebirth & Runes",
-  description: "Read the TNT Incremental guide for Release code next steps, Drop TNT, Cash, upgrades, Rebirth, Upgrade Tree, Runes, Ascend, and calculator planning.",
+  title: "TNT Incremental Guide - Release Code, Runes, Rebirth & Ascend",
+  description: "Use the TNT Incremental guide after the Release code: Drop TNT, earn Cash, buy upgrades, plan Rebirth, use Runes, prepare Ascend, and open the calculator.",
   alternates: { canonical: `${siteConfig.domain}/guides` },
   openGraph: {
-    title: "TNT Incremental Guide - Codes, Upgrades, Rebirth & Runes",
+    title: "TNT Incremental Guide - Release Code, Runes, Rebirth & Ascend",
     description: "Source-safe TNT Incremental guide hub for Release code next steps, upgrades, Rebirth, Upgrade Tree, Runes, and Ascend.",
     url: `${siteConfig.domain}/guides`,
     images: ["/opengraph-image"]
   },
   twitter: {
     card: "summary_large_image",
-    title: "TNT Incremental Guide - Codes, Upgrades, Rebirth & Runes",
-    description: "Guide hub for TNT Incremental codes, upgrades, Rebirth, Runes, Ascend, and calculator planning.",
+    title: "TNT Incremental Guide - Release Code, Runes, Rebirth & Ascend",
+    description: "Guide hub for TNT Incremental Release code next steps, upgrades, Rebirth, Runes, Ascend, and calculator planning.",
     images: ["/opengraph-image"]
   }
 };
@@ -50,7 +50,7 @@ export default function GuidesPage() {
       <Breadcrumbs items={[{ label: "Guides", href: "/guides" }]} />
       <PageIntro
         eyebrow="Guide hub"
-        title="TNT Incremental Guide Hub"
+        title="TNT Incremental Guide After Release Code"
         description="Use this TNT Incremental guide hub after checking codes: Drop TNT, earn Cash, buy upgrades, Rebirth, use the Upgrade Tree, roll Runes, plan Ascend, and keep the calculator nearby."
       />
 
@@ -73,14 +73,14 @@ export default function GuidesPage() {
       <section className="mt-10">
         <SectionHeader
           eyebrow="Quick routes"
-          title="Codes, wiki, runes, and calculator"
+          title="Release code, wiki, Runes, Rebirth and calculator"
           copy="These pages answer the most common next questions after the guide: Release code status, rune names, held values, upgrades, Rebirth, Ascend, and manual planning."
         />
         <div className="mt-5 flex flex-wrap gap-3">
-          <Link className="button-secondary" href="/codes">TNT Incremental codes</Link>
+          <Link className="button-secondary" href="/codes">Release code for free Potions</Link>
           <Link className="button-secondary" href="/wiki">TNT Incremental wiki</Link>
           <Link className="button-secondary" href="/wiki/runes">Runes wiki</Link>
-          <Link className="button-secondary" href="/calculator">TNT Incremental calculator</Link>
+          <Link className="button-secondary" href="/calculator">Cash and Rebirth calculator</Link>
           <Link className="button-secondary" href="/sources">Check sources</Link>
         </div>
       </section>

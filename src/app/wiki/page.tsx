@@ -32,19 +32,19 @@ const topics = [
 ];
 
 export const metadata: Metadata = {
-  title: "TNT Incremental Wiki - Codes, Runes, Upgrades & Ascend",
-  description: "Open the TNT Incremental wiki for Release code notes, confirmed Runes, Potions, Leaderboards, upgrades, Rebirth, Ascend, and source-labelled data gaps.",
+  title: "TNT Incremental Wiki - Runes, Potions, Rebirth & Ascend",
+  description: "Open the TNT Incremental wiki for Release code notes, free Potions, confirmed Runes, upgrades, Rebirth, Ascend, Leaderboards, and source-labelled data gaps.",
   alternates: { canonical: `${siteConfig.domain}/wiki` },
   openGraph: {
-    title: "TNT Incremental Wiki - Codes, Runes, Upgrades & Ascend",
-    description: "Confirmed TNT Incremental wiki notes for Release code, Runes, Potions, Leaderboards, upgrades, Rebirth, and Ascend.",
+    title: "TNT Incremental Wiki - Runes, Potions, Rebirth & Ascend",
+    description: "Confirmed TNT Incremental wiki notes for Release code, free Potions, Runes, upgrades, Rebirth, and Ascend.",
     url: `${siteConfig.domain}/wiki`,
     images: ["/opengraph-image"]
   },
   twitter: {
     card: "summary_large_image",
-    title: "TNT Incremental Wiki - Codes, Runes, Upgrades & Ascend",
-    description: "Wiki notes for TNT Incremental Release code, Runes, upgrades, Rebirth, and Ascend.",
+    title: "TNT Incremental Wiki - Runes, Potions, Rebirth & Ascend",
+    description: "Wiki notes for TNT Incremental Release code, free Potions, Runes, upgrades, Rebirth, and Ascend.",
     images: ["/opengraph-image"]
   }
 };
@@ -83,11 +83,11 @@ export default function WikiPage() {
           copy="Use these links when a wiki topic turns into a planning question about codes, upgrades, Rebirth, Runes, or Ascend."
         />
         <div className="mt-5 flex flex-wrap gap-3">
-          <Link className="button-secondary" href="/codes">TNT Incremental codes</Link>
-          <Link className="button-secondary" href="/guides">TNT Incremental guide</Link>
+          <Link className="button-secondary" href="/codes">Release code for free Potions</Link>
+          <Link className="button-secondary" href="/guides">TNT Incremental guide after codes</Link>
           <Link className="button-secondary" href="/guides/rebirth">Rebirth guide</Link>
           <Link className="button-secondary" href="/guides/ascend">Ascend guide</Link>
-          <Link className="button-secondary" href="/calculator">TNT Incremental calculator</Link>
+          <Link className="button-secondary" href="/calculator">Cash and Rebirth calculator</Link>
         </div>
       </section>
     </main>
